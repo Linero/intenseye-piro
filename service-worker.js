@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/intenseye-piro/precache-manifest.468ad2a525ef91fd0f80b10ea3a0334d.js"
+  "/Linero/intenseye-piro/precache-manifest.613c7ef0a39239f69c684240783df803.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/intenseye-piro/index.html", {
+workbox.routing.registerNavigationRoute("/Linero/intenseye-piro/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
