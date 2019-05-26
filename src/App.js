@@ -15,7 +15,6 @@ class App extends Component {
   timer = 0;
  
   newLink = "images/man/0.jpg"
-  startTimer = this.startTimer.bind(this);
   state = {
     emotionPredictions: [],
     gender: null,
@@ -65,9 +64,6 @@ class App extends Component {
     clearInterval(this.timer)
   }
 
-  startTimer() {
-      this.timer = setTimeout(this.adDisplay, 1000);
-  }
 
   detectFace = async () => {
     try {
@@ -145,7 +141,6 @@ class App extends Component {
 
   render() {
     const color = this.state.gender === 'Male' ? '#00a8ff' : '#e056fd';
-    //this.adDisplay();
     return (
       <div className="App">
         <div className="App-container">

@@ -4,6 +4,7 @@ export default class ModelBase {
   constructor(modelPath) {
     this.modelPath = modelPath;
   }
+
   loadModel = () => tf.loadLayersModel(this.modelPath)
     .then((model) => {
       this.model = model;

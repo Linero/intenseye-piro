@@ -2,8 +2,10 @@ import ModelBase from "./modelBase";
 import {resize, rgb2greyscale} from "../utils/imutils";
 
 export default class AgeGenderDetector extends ModelBase {
+
   constructor() {
     super('https://s3.amazonaws.com/intenseye-workshop/age_gender2/model.json');
+
   }
 
   predict = async (img) => {
