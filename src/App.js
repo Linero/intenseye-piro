@@ -110,7 +110,7 @@ class App extends Component {
   adDisplay(){
    
     this.timer = setInterval(()=>{
-      const index = Math.floor(Math.random()*5);
+      const index = Math.floor(Math.random()*6);
       let seconds = this.state.counter - 1;
       if(seconds <= 0) {
         seconds = 10;
