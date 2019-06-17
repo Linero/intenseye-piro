@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/intenseye-piro/precache-manifest.c22ab84ece56dfeeaa1b2266f72a7b98.js"
+  "/intenseye-piro/precache-manifest.3d47c6882dda7f4ff2594a27695040c6.js"
 );
 
 workbox.clientsClaim();
