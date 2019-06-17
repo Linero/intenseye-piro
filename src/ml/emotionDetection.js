@@ -4,8 +4,8 @@ import {resize, rgb2greyscale} from '../utils/imutils';
 export default class EmotionDetector extends ModelBase {
 
   constructor() {
-    super(JSON.stringify('ml/model.json'));
-  // super('https://s3.amazonaws.com/intenseye-workshop/emotion/model.json')
+    //super(JSON.stringify('ml/model.json'));
+  super('https://s3.amazonaws.com/intenseye-workshop/emotion/model.json')
 
   }
 
