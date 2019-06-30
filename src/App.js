@@ -5,6 +5,7 @@ import EmotionDetector from './ml/emotionDetection';
 import AgeGenderDetector from './ml/ageGender';
 import './App.css';
 import Result from "./Result";
+import Parser from 'html-react-parser';
 
 class App extends Component {
   faceDetector = new FaceDetector();
@@ -13,6 +14,7 @@ class App extends Component {
   webcam = React.createRef();
   canvas = React.createRef();
   timer = 0;
+  content = `<img src="images/man/0.jpg" alt="" width="600"></img>`
  
   newLink = "images/man/0.jpg"
   state = {
@@ -110,12 +112,21 @@ class App extends Component {
   adDisplay(){
    
     this.timer = setInterval(()=>{
-      const index = Math.floor(Math.random()*6);
+      const index = Math.floor(Math.random()*10);
       let seconds = this.state.counter - 1;
       if(seconds <= 0) {
         seconds = 10;
           if(this.state.gender === 'Male'){
+            if (index === 4){
+              this.newLink = "images/man/" + index +".mp4";
+              this.content = `<video width="600" height="600" controls autoplay>
+              <source src=${this.newLink} type="video/mp4" autoplay="autoplay">
+              </video>`
+
+            } else {
             this.newLink = "images/man/" + index +".jpg";
+            this.content = `<img src=${this.newLink} alt="" width="600" height="600"></img>`
+            }
             this.adIndex = index;
             this.setState({
               link: this.newLink,
@@ -123,7 +134,17 @@ class App extends Component {
               });
           }
           else if (this.state.gender === 'Female'){
-            this.newLink = "images/woman/" + index+".jpg";
+            if (index === 4){
+              this.newLink = "images/woman/" + index +".mp4";
+              this.content = `<video width="600" height="600" controls autoplay>
+              <source src=${this.newLink} type="video/mp4" autoplay="autoplay">
+              </video>`
+
+            } else {
+            this.newLink = "images/woman/" + index +".jpg";
+            this.content = `<img src=${this.newLink} alt="" width="600" height="600"></img>`
+            }
+            //this.newLink = "images/woman/" + index+".jpg";
             this.setState({
               link: this.newLink,
             adIndex: index
@@ -160,7 +181,9 @@ class App extends Component {
                         
                         </div>
                         <div>
-                        <img src={this.state.link} alt="" width="1000"></img>
+                        
+                        {Parser(this.content)}
+                        
                         </div>
                         </div>
             
