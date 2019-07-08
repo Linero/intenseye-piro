@@ -2,7 +2,7 @@
   "name": "intenseye-piro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://linero.github.com/intenseye-piro",
+  "homepage": "https://linero.github.io/intenseye-piro/",
   "dependencies": {
     "@tensorflow/tfjs": "^0.15.3",
     "face-api.js": "^0.18.0",

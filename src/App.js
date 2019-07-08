@@ -14,7 +14,7 @@ class App extends Component {
   webcam = React.createRef();
   canvas = React.createRef();
   timer = 0;
-  content = `<img src="images/man/0.jpg" alt="" width="600"></img>`
+  content = `<img src="images/man/0.jpg" alt="" width="600" height="600"></img>`
  
   newLink = "images/man/0.jpg"
   state = {
